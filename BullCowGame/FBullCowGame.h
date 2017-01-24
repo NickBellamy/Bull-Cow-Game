@@ -34,8 +34,6 @@ public:
 	void Reset(); //TODO make a more rich return value.
 	FBullCowCount SubmitValidGuess(FString);
 
-
-// please try and ignore this for now, and focus on the interface above.
 private:
 	// see constructor for initialization.
 	int32 MyCurrentTry;

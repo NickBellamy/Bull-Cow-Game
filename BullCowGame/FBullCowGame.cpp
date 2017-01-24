@@ -112,11 +112,10 @@ bool FBullCowGame::IsLowercase(FString Word) const
 {
 	for (auto Letter : Word)
 	{
-		if (!islower(Letter) || Letter != ' ')
+		if (!islower(Letter))
 		{
 			return false;
 		}
 		return true;
 	}
 }
-

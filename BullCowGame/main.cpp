@@ -2,20 +2,24 @@
 This acts as the view in an MVC pattern, and is responsible for all user interaction.
 For game logic see the FBullCowGame class.
 */
+#pragma once
 
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
 
+// to make syntax Unreal friendly
 using FText = std::string;
 using int32 = int;
 
+// function prototypes as outside a class
 void PrintIntro();
 void PlayGame();
 FText GetValidGuess();
 bool AskToPlayAgain();
 void PrintGameSummary();
 
+// instantiate a new game, which we re-use across plays
 FBullCowGame BCGame;
 
 
@@ -32,10 +36,8 @@ int main()
 	return 0;
 }
 
-
 void PrintIntro()
 {
-	// introduce the game
 	std::cout << "\n\nWelcome to Bulls and Cows, a fun word game.\n";
 	std::cout << std::endl;
 	std::cout << "          }   {         ___ " << std::endl;
@@ -48,7 +50,7 @@ void PrintIntro()
 	return;
 }
 
-
+// plays a single game to completion
 void PlayGame()
 {
 	BCGame.Reset();
@@ -97,6 +99,7 @@ FText GetValidGuess()
 		case EGuessStatus::Not_Lowercase:
 			std::cout << "Please enter all lower case letters.\n\n";
 			break;
+		// TODO Add case to check if the word has already been previously entered
 		default:
 			// assume the guess is valid
 			break;

@@ -21,7 +21,8 @@ enum class EGuessStatus
 	OK,
 	Not_Isogram,
 	Wrong_Length,
-	Not_Lowercase
+	Not_Lowercase,
+	Guess_Repeated
 };
 
 class FBullCowGame
@@ -46,4 +47,5 @@ private:
 
 	bool IsIsogram(FString) const;
 	bool IsLowercase(FString) const;
+	bool IsGuessRepeated(FString) const;
 };

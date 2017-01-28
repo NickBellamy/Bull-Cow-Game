@@ -13,7 +13,7 @@ int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
 int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
 bool FBullCowGame::IsGameWon() const { return bIsGameWon; }
 
-TMap<FString, bool> ListOfGuesses;
+//TMap<FString, bool> ListOfGuesses;
 
 int32 FBullCowGame::GetMaxTries() const 
 {

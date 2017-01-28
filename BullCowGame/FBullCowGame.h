@@ -4,6 +4,7 @@ The game is a simple guess the word game based on Mastermind*/
 #pragma once
 
 #include <string>
+#include <map>
 
 // to make the syntax Unreal friendly
 using FString = std::string;
@@ -44,6 +45,7 @@ private:
 	int32 MyCurrentTry;
 	FString MyHiddenWord;
 	bool bIsGameWon;
+	mutable std::map<FString, bool> ListOfGuesses; // not sure if this is the best implementation!
 
 	bool IsIsogram(FString) const;
 	bool IsLowercase(FString) const;

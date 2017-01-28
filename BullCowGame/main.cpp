@@ -100,7 +100,7 @@ FText GetValidGuess()
 			std::cout << "Please enter all lower case letters.\n\n";
 			break;
 		case EGuessStatus::Guess_Repeated:
-			std::cout << "You have already entered that word.\n\n"; // TODO Repeat the word back to the player
+			std::cout << "You have already entered the word \"" << Guess << "\".\n\n";
 			break;
 		default:
 			// assume the guess is valid

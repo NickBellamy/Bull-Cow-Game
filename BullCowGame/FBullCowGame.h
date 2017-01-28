@@ -7,6 +7,7 @@ The game is a simple guess the word game based on Mastermind*/
 #include <map>
 
 // to make the syntax Unreal friendly
+#define TMap std::map
 using FString = std::string;
 using int32 = int;
 
@@ -45,7 +46,7 @@ private:
 	int32 MyCurrentTry;
 	FString MyHiddenWord;
 	bool bIsGameWon;
-	mutable std::map<FString, bool> ListOfGuesses; // not sure if this is the best implementation!
+	mutable TMap<FString, bool> ListOfGuesses; // not sure if this is the best implementation!
 
 	bool IsIsogram(FString) const;
 	bool IsLowercase(FString) const;
